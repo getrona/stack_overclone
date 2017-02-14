@@ -1,7 +1,20 @@
 <h2> <%= @quesiton.title %> </h2>
 <hr>
-<div class="rating">
-  <i class="fa fa-chevron-up fa-4x"></i>
-  <%= @question.rating %>
-  <i class="fa fa-chevron-down fa-4x"></i>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="rating">
+        <i class="fa fa-chevron-up fa-4x"></i>
+        <%= @question.rating %>
+        <i class="fa fa-chevron-down fa-4x"></i>
+      </div>
+      <div class="question">
+        <p><%= @question.question %></p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <p>Salvia pour-over +1, disrupt art party flannel ramps organic distillery before they sold out bespoke heirloom. Ennui tousled XOXO kickstarter, franzen irony yr fam banh mi wayfarers chambray live-edge hella whatever snackwave. Kinfolk farm-to-table scenester keytar mixtape +1. Subway tile narwhal portland microdosing kitsch cold-pressed, lo-fi ennui crucifix enamel pin williamsburg seitan XOXO cardigan sartorial. Sartorial gastropub raclette offal ennui mlkshk. Cronut franzen flannel schlitz blue bottle. Brunch yr cronut, man braid stumptown tattooed YOLO.</p>
+    </div>
+  </div>
+
 </div>

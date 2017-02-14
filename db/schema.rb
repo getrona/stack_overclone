@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214190731) do
+ActiveRecord::Schema.define(version: 20170214213526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.string   "answer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "answerable_type"
+    t.integer  "answerable_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["answerable_type", "answerable_id"], name: "index_answers_on_answerable_type_and_answerable_id", using: :btree
   end
 
   create_table "questions", force: :cascade do |t|
@@ -28,6 +31,20 @@ ActiveRecord::Schema.define(version: 20170214190731) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.integer  "reputation"
+    t.integer  "gold"
+    t.integer  "silver"
+    t.integer  "bronze"
+    t.string   "job"
+    t.string   "location"
+    t.integer  "profile_views"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
