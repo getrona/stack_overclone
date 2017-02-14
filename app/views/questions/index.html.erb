@@ -1,0 +1,19 @@
+<%= @quesitons.each do |question| %>
+    <div class="question-wrapper">
+      <%= link_to(question_path(question)) do %>
+        <h3><%= question.title %></h3>
+      <% end %>
+
+      <p class="question-excerpt"><%= quesiton.question %></p>
+
+      <%= link_to(user_path(question.user_id)) do %>
+        <p class="user"> <%= question.user.name %> </p>
+      <% end %>
+      <div class="rating">
+        <p> <%= question.rating %> </p>
+      </div>
+      <div class="answers">
+        <p><%= question.answers.length %></p>
+      </div>
+    </div>
+<% end %>
