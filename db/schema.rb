@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170214213526) do
     t.string   "job"
     t.string   "location"
     t.integer  "profile_views"
+    t.string   "password_hash"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

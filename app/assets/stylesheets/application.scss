@@ -1,0 +1,41 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.brand-logo {
+  width: 50px;
+  position: relative;
+  top: -15px;
+}
+
+.question-wrapper {
+  position: relative;
+  padding: 10px 75px;
+  padding-bottom: 50px;
+  margin: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.user {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.rating {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.answers {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+}
+
+.box {
+  height: 300px;
+  width: 90%;
+  margin: 10px auto;
+  background-color: #eee;
+}

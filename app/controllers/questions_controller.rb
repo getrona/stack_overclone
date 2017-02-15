@@ -9,11 +9,14 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
+    @user = User.find(params[:user_id])
   end
 
   def create
+    @user = User.find(params[:user_id])
     @question = Question.new(question_params)
-    if @question.save
+    @user.questions.push(@question)
+    if @user.save
       redirect_to questions_path
     else
       render :new
@@ -41,7 +44,7 @@ class QuestionsController < ApplicationController
 
 private
   def question_params
-    params.require(:question).permit(:question, :title)
+    params.require(:question).permit(:question, :title, :user_id)
   end
 
 end

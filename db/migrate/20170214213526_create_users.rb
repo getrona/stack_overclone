@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.column :job, :string
       t.column :location, :string
       t.column :profile_views, :integer
+      t.column :password_hash, :string
 
       t.timestamps
     end
